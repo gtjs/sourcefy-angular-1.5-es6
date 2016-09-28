@@ -14,7 +14,20 @@ let homeModule = angular.module('home', [
   $stateProvider
     .state('home', {
       url: '/',
-      component: 'home'
+      views:{
+        topnav: {
+          template: "<navbar></navbar>"
+        },
+        sidebar: {
+          template: "<sidebar></sidebar>"
+        },
+        content: {
+          template: "<home></home>"
+        },
+        player: {
+          template:  "<player></player>"
+        }
+      },
     });
 })
 

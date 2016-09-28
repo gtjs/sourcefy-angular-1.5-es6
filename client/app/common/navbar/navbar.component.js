@@ -1,12 +1,13 @@
 import template from './navbar.html';
 import controller from './navbar.controller';
-import './navbar.styl';
+import './navbar.scss';
 
 let navbarComponent = {
   restrict: 'E',
   bindings: {},
   template,
-  controller
+  controller,
+  controllerAs: 'vm'
 };
 
 export default navbarComponent;

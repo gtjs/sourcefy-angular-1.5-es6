@@ -1,16 +1,16 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-import <%= name %>Component from './<%= name %>.component';
+import sidebarComponent from './sidebar.component';
 
-let <%= name %>Module = angular.module('<%= name %>', [
+let sidebarModule = angular.module('sidebar', [
   uiRouter
 ])
 
 // .config(($stateProvider) => {
 // 	 "ngInject";
 // 	 $stateProvider
-// 		 .state('<%= name %>', {
-// 			 url: '/<%= name %>',
+// 		 .state('sidebar', {
+// 			 url: '/sidebar',
 // 			 views:{
 // 					topnav: {
 // 						template: "<topbar></topbar>"
@@ -19,7 +19,7 @@ let <%= name %>Module = angular.module('<%= name %>', [
 // 						template: "<sidebar></sidebar>"
 // 					},
 // 					content: {
-// 						template: "<<%= name %>></<%= name %>>"
+// 						template: "<sidebar></sidebar>"
 // 					},
 // 					player: {
 // 						template:	"<footer></footer>"
@@ -28,8 +28,8 @@ let <%= name %>Module = angular.module('<%= name %>', [
 // 		 });
 // })
 
-.component('<%= name %>', <%= name %>Component)
+.component('sidebar', sidebarComponent)
 
 .name;
 
-export default <%= name %>Module;
+export default sidebarModule;

@@ -1,16 +1,16 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-import <%= name %>Component from './<%= name %>.component';
+import playerComponent from './player.component';
 
-let <%= name %>Module = angular.module('<%= name %>', [
+let playerModule = angular.module('player', [
   uiRouter
 ])
 
 // .config(($stateProvider) => {
 // 	 "ngInject";
 // 	 $stateProvider
-// 		 .state('<%= name %>', {
-// 			 url: '/<%= name %>',
+// 		 .state('player', {
+// 			 url: '/player',
 // 			 views:{
 // 					topnav: {
 // 						template: "<topbar></topbar>"
@@ -19,7 +19,7 @@ let <%= name %>Module = angular.module('<%= name %>', [
 // 						template: "<sidebar></sidebar>"
 // 					},
 // 					content: {
-// 						template: "<<%= name %>></<%= name %>>"
+// 						template: "<player></player>"
 // 					},
 // 					player: {
 // 						template:	"<footer></footer>"
@@ -28,8 +28,8 @@ let <%= name %>Module = angular.module('<%= name %>', [
 // 		 });
 // })
 
-.component('<%= name %>', <%= name %>Component)
+.component('player', playerComponent)
 
 .name;
 
-export default <%= name %>Module;
+export default playerModule;

@@ -1,16 +1,16 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-import <%= name %>Component from './<%= name %>.component';
+import volumeComponent from './volume.component';
 
-let <%= name %>Module = angular.module('<%= name %>', [
+let volumeModule = angular.module('volume', [
   uiRouter
 ])
 
 // .config(($stateProvider) => {
 // 	 "ngInject";
 // 	 $stateProvider
-// 		 .state('<%= name %>', {
-// 			 url: '/<%= name %>',
+// 		 .state('volume', {
+// 			 url: '/volume',
 // 			 views:{
 // 					topnav: {
 // 						template: "<topbar></topbar>"
@@ -19,7 +19,7 @@ let <%= name %>Module = angular.module('<%= name %>', [
 // 						template: "<sidebar></sidebar>"
 // 					},
 // 					content: {
-// 						template: "<<%= name %>></<%= name %>>"
+// 						template: "<volume></volume>"
 // 					},
 // 					player: {
 // 						template:	"<footer></footer>"
@@ -28,8 +28,8 @@ let <%= name %>Module = angular.module('<%= name %>', [
 // 		 });
 // })
 
-.component('<%= name %>', <%= name %>Component)
+.component('volume', volumeComponent)
 
 .name;
 
-export default <%= name %>Module;
+export default volumeModule;

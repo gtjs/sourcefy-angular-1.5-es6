@@ -1,0 +1,45 @@
+.sidebar{
+    position: fixed;
+    left: 0;
+    top:50px;
+    bottom: 70px;
+    width: 200px;
+    background: #252758;
+    padding:0 15px;
+
+    h5{
+        font-size: 15px;
+        padding: 15px 10px;
+        border-bottom: 1px solid #2B366F;
+    }
+
+    a{
+        color: #7d8ba9;
+    }
+
+    .nav > li > a{
+        padding: 5px 10px;
+    }
+}
+
+.sidebar-scrollview{
+    overflow-y: auto;
+    height: 100%;
+}
+
+.nowPlaying{
+    position: fixed;
+    width: 200px;
+    bottom: 70px;
+    left: 0;
+}
+
+::-webkit-scrollbar
+{
+    width: 0px;
+}
+::-webkit-scrollbar-track-piece
+{
+    background-color: transparent;
+    -webkit-border-radius: 6px;
+}

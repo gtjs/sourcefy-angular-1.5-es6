@@ -1,16 +1,16 @@
-import HeroModule from './hero'
-import HeroController from './hero.controller';
-import HeroComponent from './hero.component';
-import HeroTemplate from './hero.html';
+import CardModule from './card'
+import CardController from './card.controller';
+import CardComponent from './card.component';
+import CardTemplate from './card.html';
 
-describe('Hero', () => {
+describe('Card', () => {
   let $rootScope, makeController;
 
-  beforeEach(window.module(HeroModule));
+  beforeEach(window.module(CardModule));
   beforeEach(inject((_$rootScope_) => {
     $rootScope = _$rootScope_;
     makeController = () => {
-      return new HeroController();
+      return new CardController();
     };
   }));
 
@@ -30,20 +30,20 @@ describe('Hero', () => {
     // template specs
     // tip: use regex to ensure correct bindings are used e.g., {{  }}
     it('has name in template [REMOVE]', () => {
-      expect(HeroTemplate).to.match(/{{\s?\$ctrl\.name\s?}}/g);
+      expect(CardTemplate).to.match(/{{\s?\$ctrl\.name\s?}}/g);
     });
   });
 
   describe('Component', () => {
       // component/directive specs
-      let component = HeroComponent;
+      let component = CardComponent;
 
       it('includes the intended template',() => {
-        expect(component.template).to.equal(HeroTemplate);
+        expect(component.template).to.equal(CardTemplate);
       });
 
       it('invokes the right controller', () => {
-        expect(component.controller).to.equal(HeroController);
+        expect(component.controller).to.equal(CardController);
       });
   });
 });
