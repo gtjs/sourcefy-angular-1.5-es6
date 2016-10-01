@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "angular": "^1.5.8",
+    "angular-PubSub": "^1.0.0",
     "angular-ui-router": "^1.0.0-beta.1",
     "angularjs-slider": "^5.5.1",
     "bootstrap-sass": "^3.3.7",
@@ -57,6 +58,7 @@
     "yargs": "^3.9.0"
   },
   "scripts": {
+    "gulp": "gulp",
     "test": "karma start"
   },
   "keywords": [

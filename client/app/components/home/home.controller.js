@@ -1,8 +1,9 @@
 class HomeController {
-  constructor() {
-    this.name = 'home';
-    this.exploreList = 
-    [
+
+  constructor(PubSub, filterFilter) {
+    "ngInject";
+
+    const list = [
       {
         id:1,
         img: "https://source.unsplash.com/category/people/600x300",
@@ -28,6 +29,18 @@ class HomeController {
         description: "lorem ipsum sit amet",
       }
     ];
+
+    this.name = 'home';
+    this.exploreList = angular.copy(list);
+
+    PubSub.subscribe('search', ({text}) => {
+      if(text) {
+        this.exploreList = filterFilter(this.exploreList, text);
+      } else {
+        this.exploreList = angular.copy(list);;
+      }
+    });
+
   }
 }
 

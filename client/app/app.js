@@ -3,14 +3,12 @@ import uiRouter from 'angular-ui-router';
 import Common from './common/common';
 import Components from './components/components';
 import AppComponent from './app.component';
-import angularSlider from 'angularjs-slider';
 //import 'normalize.css';
 
 angular.module('app', [
     uiRouter,
     Common,
     Components,
-    angularSlider,
   ])
   .config(($locationProvider) => {
     "ngInject";
