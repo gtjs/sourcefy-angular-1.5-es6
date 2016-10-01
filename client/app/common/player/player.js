@@ -4,7 +4,7 @@ import playerComponent from './player.component';
 
 let playerModule = angular.module('player', [
   uiRouter
-])
+  ])
 
 // .config(($stateProvider) => {
 // 	 "ngInject";

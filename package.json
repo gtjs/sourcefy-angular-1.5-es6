@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "angular": "^1.5.8",
+    "angular-audio": "^1.7.3",
     "angular-ui-router": "^1.0.0-beta.1",
     "angularjs-slider": "^5.5.1",
     "bootstrap-sass": "^3.3.7",
